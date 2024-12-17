@@ -1,1 +1,19 @@
+1. Sharpe:
 
+This ratio measures the excess return (or risk premium) per unit of deviation of returns of an Alpha. It takes the mean of the PnL divided by the standard deviation of the PnL. The higher the Sharpe Ratio or Information Ratio (IR), the more consistent the Alpha’s returns are potentially likely to be, and consistency is an ideal trait. The passing requirement for Sharpe on the BRAIN platform is to be above 1.25
+
+Sharpe = sq.root(252) * [(Mean(PnL) / std.dev(PnL)]
+
+
+2. Turnover:
+
+Turnover of an Alpha is metric that measures the simulated daily trading activity, i.e., how often the Alpha trades. It can be defined as the ratio of value traded to book size. The higher the turnover, the more often a trade occurs. Since trading incurs transaction costs, reducing turnover is generally an ideal trait. The passing requirement for turnover on the BRAIN platform is to be between 1% and 70%.
+
+Turnover = (value_traded / book_size)
+
+
+3. Fitness
+
+Fitness of an Alpha is a function of Returns, Turnover & Sharpe. Fitness is defined as:
+
+Fitness = Sharpe * sq.root [abs(returns) / max(turnover, 0.125)]
