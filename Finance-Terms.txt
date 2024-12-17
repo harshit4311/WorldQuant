@@ -17,3 +17,18 @@ Turnover = (value_traded / book_size)
 Fitness of an Alpha is a function of Returns, Turnover & Sharpe. Fitness is defined as:
 
 Fitness = Sharpe * sq.root [abs(returns) / max(turnover, 0.125)]
+
+Good Alphas generally have high fitness. You can seek to improve the performance of your Alphas by increasing Sharpe (or returns) and reducing turnover. The passing requirement for fitness on the BRAIN platform is to be greater than 1.0.
+
+
+4. Returns
+
+Returns is the amount made or lost by the Alpha during a defined period and is expressed in percentages. BRAIN defines returns as:
+
+annual_return = (annualized_PnL / 0.5 * book_size)
+
+
+5. Drawdown
+
+Drawdown of an Alpha is the largest reduction in simulated PnL during a given period, expressed as a percentage. It is calculated as follows:
+
